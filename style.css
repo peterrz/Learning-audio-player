@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 25, 2017, 3:52:52 PM
+    Author     : Peter
+*/
+
+
+#lol{
+    -fx-background-image: url("../pic/2013.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#play{ 
+    -fx-background-image: url("../pic/play.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#back{
+     -fx-background-image: url("../pic/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#stop{
+     -fx-background-image: url("../pic/stop.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#replay{
+    -fx-background-image: url("../pic/replay.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#skip{
+    -fx-background-image: url("../pic/next.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#volumeIcon{
+    -fx-background-image: url("../pic/volume.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}
+#volumeIcon1{
+    -fx-background-image: url("../pic/mutevolume.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color:transparent;
+}

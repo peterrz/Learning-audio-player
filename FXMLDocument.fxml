@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="420.0" prefWidth="390.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="play.FXMLDocumentController">
+    <children>
+      <Pane fx:id="lol" layoutX="-4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="406.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <Button fx:id="Home" layoutX="42.0" layoutY="27.0" onAction="#Home" prefHeight="45.0" prefWidth="99.0" text="Home">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="116.16" color="#f5ffec" elevation="132.91" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+              <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="9.0" layoutY="307.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="383.0" textAlignment="CENTER" textFill="#0c7feb" />
+            <Button fx:id="button1" layoutX="42.0" layoutY="169.0" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="99.0" text="Help">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="116.16" color="#d4dacf" elevation="132.91" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="button2" layoutX="42.0" layoutY="99.0" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="99.0" text="Open lessons">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="116.16" color="#dbe4d3" elevation="132.91" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button layoutX="42.0" layoutY="240.0" prefHeight="45.0" prefWidth="99.0" text="About">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="116.16" color="#d4dacf" elevation="132.91" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Button>
+            <ListView fx:id="scroll" layoutX="207.0" layoutY="26.0" onKeyPressed="#selectfile" onMouseClicked="#selectedfile" prefHeight="269.0" prefWidth="209.0" />
+            <Button fx:id="back" layoutX="141.0" layoutY="368.0" mnemonicParsing="false" onAction="#Back" onKeyPressed="#key" prefHeight="52.0" prefWidth="60.0" />
+            <Button fx:id="stop" layoutX="75.0" layoutY="368.0" mnemonicParsing="false" onAction="#Stop" onKeyPressed="#key" prefHeight="52.0" prefWidth="60.0" />
+            <Button fx:id="replay" layoutX="25.0" layoutY="368.0" mnemonicParsing="false" onAction="#Replay" onKeyPressed="#key" prefHeight="52.0" prefWidth="60.0" />
+            <Button fx:id="skip" layoutX="241.0" layoutY="368.0" mnemonicParsing="false" onAction="#Skip" onKeyPressed="#key" prefHeight="52.0" prefWidth="60.0" />
+            <ProgressBar fx:id="progress" layoutX="16.0" layoutY="343.0" prefHeight="25.0" prefWidth="376.0" />
+            <Label layoutX="312.0" layoutY="2.0" prefHeight="25.0" prefWidth="44.0" text="Total:" textFill="#514f4fe3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="total" layoutX="353.0" layoutY="2.0" prefHeight="25.0" prefWidth="44.0" textFill="#26405e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <MediaView fx:id="mediaVeiw" fitHeight="20.0" fitWidth="20.0" layoutX="193.0" layoutY="333.0" />
+            <Button fx:id="play" layoutX="191.0" layoutY="368.0" mnemonicParsing="false" onAction="#Play" onKeyPressed="#key" prefHeight="52.0" prefWidth="60.0" />
+            <Label fx:id="locate" layoutX="213.0" layoutY="2.0" prefHeight="25.0" prefWidth="87.0" textFill="#514f4f">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Slider fx:id="slider" layoutX="312.0" layoutY="390.0" onMouseClicked="#changevolume" onMouseDragged="#changevolume" opacity="0.79" prefHeight="25.0" prefWidth="73.0" value="100.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Slider>
+            <Label fx:id="volumeIcon" layoutX="339.0" layoutY="376.0" onMouseClicked="#setvloumeoff" prefHeight="18.0" prefWidth="22.0" />
+            <Label fx:id="volumeIcon1" layoutX="339.0" layoutY="376.0" onMouseClicked="#setvloumeon" prefHeight="18.0" prefWidth="22.0" visible="false" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
