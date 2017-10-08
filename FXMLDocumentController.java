@@ -231,7 +231,7 @@ scroll.setItems(items);
         currentPlayer.stop();
         nextPlayer.play();
         back.setDisable(false); 
-          
+        mediaVeiw.getMediaPlayer().setVolume(slider.getValue()/100);  
         }catch(Exception e){
         }
   
@@ -240,7 +240,7 @@ scroll.setItems(items);
     private void Replay(ActionEvent event) {
         try{
         MediaPlayer curPlayer = mediaVeiw.getMediaPlayer();
-      
+       mediaVeiw.getMediaPlayer().setVolume(slider.getValue()/100);
      progress.setProgress(0);
          curPlayer.stop();
   curPlayer.seek(Duration.ZERO);
@@ -289,6 +289,7 @@ scroll.setItems(items);
         curPlayer.stop();
         backPlayer.play();
          back.setDisable(false);
+         mediaVeiw.getMediaPlayer().setVolume(slider.getValue()/100);  
         }
        }catch(Exception e)
       {
